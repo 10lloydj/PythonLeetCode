@@ -13,6 +13,6 @@ class Solution:
                 # overlap ( [a,b], [c,d]. overlap if c < b when sorted by end values)
                 count = count + 1
             else:
-                end = max(end, intervals[current][1])
+                end = intervals[current][1]
 
         return count
