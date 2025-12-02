@@ -26,9 +26,6 @@ class Solution:
                 last.next = None
             return head
 
-            if len(stack) == 1 and n == 1:
-                return None
-
         for i in range(0, n - 2):
             stack.pop()
 
