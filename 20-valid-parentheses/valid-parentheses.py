@@ -8,4 +8,6 @@ class Solution:
                     return False
             else:
                 stack.append(char)
-        return not stack
+        if stack:
+            return False
+        return True
