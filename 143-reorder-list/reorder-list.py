@@ -9,7 +9,7 @@ class Solution:
         Do not return anything, modify head in-place instead.
         """
         stack = deque()
-        if head.next == None:
+        if head.next is None:
             return head
         current = head
         while current is not None:
