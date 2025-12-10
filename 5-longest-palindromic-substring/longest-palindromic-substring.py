@@ -18,9 +18,8 @@ class Solution:
             odd_pal = expand(i, i)
             even_pal = expand(i, i + 1)
 
-            if len(odd_pal) > len(even_pal):
-                if len(odd_pal) > len(longest):
-                    longest = odd_pal
-            elif len(even_pal) > len(longest):
+            if len(odd_pal) > len(longest):
+                longest = odd_pal
+            if len(even_pal) > len(longest):
                 longest = even_pal
         return longest
