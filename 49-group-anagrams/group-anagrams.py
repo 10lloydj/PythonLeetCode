@@ -10,8 +10,4 @@ class Solution:
             else:
                 group[sorted_string] = [current]
 
-        result = []
-        for value in group.values():
-            result.append(value)
-
-        return result
+        return list(group.values())
