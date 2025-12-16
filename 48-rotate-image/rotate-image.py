@@ -10,9 +10,5 @@ class Solution:
 
         # reverse
         for row in matrix:
-            left, right = 0, len(row) - 1
-            while left < right:
-                row[left], row[right] = row[right], row[left]
-                left += 1
-                right -= 1
-                
+            row.reverse()
+
