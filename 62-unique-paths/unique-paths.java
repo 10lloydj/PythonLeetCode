@@ -22,7 +22,6 @@ class Solution {
 
         for (int x = rows - 2; x >= 0; x--) {
             for (int y = cols - 2; y >= 0; y--) {
-                //  dp == 2 below
                 dp[x][y] = dp[x + 1][y] + dp[x][y + 1];
             }
         }
