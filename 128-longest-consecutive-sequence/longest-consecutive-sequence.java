@@ -8,10 +8,12 @@ class Solution {
             set.add(x);
         }
         int max = 0;
+        int current;
+        int count;
         // check if current has a lower value, then go up
         for(int a : set) {
-            int current = a;
-            int count = 1;
+            current = a;
+            count = 1;
             // iterates to the 'lowest' value
             if (set.contains(current - 1)) {
                 continue;
