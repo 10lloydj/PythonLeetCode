@@ -8,6 +8,10 @@ class Solution {
                 maxProfit = Math.max(maxProfit, prices[right] - prices[left]);
                 right++;
             }
+            // skip left values larger than previous
+            while(left < prices.length - 1 && prices[left] < prices[left + 1]) {
+                left++;
+            }
             left++;
             right = left + 1;
         }
