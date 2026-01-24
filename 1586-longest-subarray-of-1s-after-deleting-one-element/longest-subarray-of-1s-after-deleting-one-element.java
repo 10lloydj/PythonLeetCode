@@ -20,6 +20,7 @@ class Solution {
             if (delLeft == 1 && (r - l + 1) < nums.length) {
                 best = Math.max(best, r - l + 1);
             } else {
+                // if delLeft = 0 best - 1
                 best = Math.max(best, r - l);
             }
         }
