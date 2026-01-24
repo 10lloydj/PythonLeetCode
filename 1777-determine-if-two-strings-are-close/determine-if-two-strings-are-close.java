@@ -18,12 +18,9 @@ class Solution {
         if (word1Map.size() != word2Map.size()) return false;
 
         // check the content of chars are the same
-        List<Character> word1KeySet = new ArrayList<>(word1Map.keySet());
-        List<Character> word2KeySet = new ArrayList<>(word2Map.keySet());
-        Collections.sort(word1KeySet);
-        Collections.sort(word2KeySet);
-
-        if(!word1KeySet.equals(word2KeySet)) return false;
+        for( char c : word1Map.keySet()) {
+            if (!word2Map.containsKey(c)) return false;
+        }
 
         // operation 1 possible
         if(word1Map.equals(word2Map)) return true;
