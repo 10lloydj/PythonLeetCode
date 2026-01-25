@@ -24,13 +24,16 @@ class Solution {
         } else {
             if (root.left == null) return root.right;
             if (root.right == null) return root.left;
-
+            
+            // find the min val in right subtree
             TreeNode cur = root.right;
             while (cur.left != null) {
                 cur = cur.left;
             }
+            // replace that with the deleteNode value
             root.val = cur.val;
-            root.right = deleteNode(root.right, root.val);
+            // delete the replacement
+            root.right = deleteNode(root.right, cur.val);
         }
 
         return root;
